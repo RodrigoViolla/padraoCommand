@@ -2,7 +2,7 @@
 public class Ligar implements ICommand {
 
 	@Override
-	public void acionar(Dispositivo d) {
+	public void precionar(Dispositivo d) {
 		System.out.println(d.getNome() + " Ligado");	
 	}
 }
