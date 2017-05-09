@@ -1,3 +1,4 @@
+package br.fae.es.sem5.command;
 public class Principal {
 	public static void main(String[] args) {
 		Controle gerenciar = new Controle();

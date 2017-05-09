@@ -1,29 +1,36 @@
-package InterfaceGrafica;
+package br.fae.es.sem5.command;
 
 import java.awt.Color;
 import java.awt.Font;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
+import javax.swing.JFrame;
 import javax.swing.JLabel;
-import javax.swing.JPanel;
 import javax.swing.SwingConstants;
 
-public class JanelaPrincipal extends JPanel {
+public class JanelaPrincipal extends JFrame {
+	private Controle controle = new Controle();
 	private static final long serialVersionUID = 1L;
+
+	public static void main(String[] args) {
+		new JanelaPrincipal();
+	}
 
 	public JanelaPrincipal() {
 		setBackground(new Color(169, 169, 169));
 		setLayout(null);
 
 		JLabel lblTitulo = new JLabel("Controle Remoto");
+		lblTitulo.setBounds(60, 34, 230, 23);
 		lblTitulo.setHorizontalAlignment(SwingConstants.CENTER);
 		lblTitulo.setFont(new Font("Arial Black", Font.PLAIN, 22));
-		lblTitulo.setBounds(60, 34, 230, 23);
 		add(lblTitulo);
 
 		JLabel lblTv = new JLabel("TV");
-		lblTv.setHorizontalAlignment(SwingConstants.CENTER);
 		lblTv.setBounds(10, 102, 132, 23);
+		lblTv.setHorizontalAlignment(SwingConstants.CENTER);
 		add(lblTv);
 
 		JButton btnLigarTV = new JButton("Ligar");
@@ -35,8 +42,8 @@ public class JanelaPrincipal extends JPanel {
 		add(btnDesligarTV);
 
 		JLabel lblRadio = new JLabel("Rádio");
-		lblRadio.setHorizontalAlignment(SwingConstants.CENTER);
 		lblRadio.setBounds(10, 172, 132, 23);
+		lblRadio.setHorizontalAlignment(SwingConstants.CENTER);
 		add(lblRadio);
 
 		JButton btnLigarRadio = new JButton("Ligar");
@@ -48,8 +55,8 @@ public class JanelaPrincipal extends JPanel {
 		add(btnDesligarRadio);
 
 		JLabel lblPortaoEletronico = new JLabel("Portão Eletrônico");
-		lblPortaoEletronico.setHorizontalAlignment(SwingConstants.CENTER);
 		lblPortaoEletronico.setBounds(10, 237, 132, 23);
+		lblPortaoEletronico.setHorizontalAlignment(SwingConstants.CENTER);
 		add(lblPortaoEletronico);
 
 		JButton btnLigarPortaoEletronico = new JButton("Ligar");
@@ -61,8 +68,8 @@ public class JanelaPrincipal extends JPanel {
 		add(btnDesligarPortaoEletronico);
 
 		JLabel lblArCondicionado = new JLabel("Ar Condicionado");
-		lblArCondicionado.setHorizontalAlignment(SwingConstants.CENTER);
 		lblArCondicionado.setBounds(10, 300, 132, 23);
+		lblArCondicionado.setHorizontalAlignment(SwingConstants.CENTER);
 		add(lblArCondicionado);
 
 		JButton btnLigarArCondicionado = new JButton("Ligar");
@@ -72,5 +79,13 @@ public class JanelaPrincipal extends JPanel {
 		JButton btnDesligarArCondicionado = new JButton("Desligar");
 		btnDesligarArCondicionado.setBounds(251, 300, 89, 23);
 		add(btnDesligarArCondicionado);
+
+		btnLigarTV.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				Dispositivo tv = new Dispositivo("tv");
+				controle.ArmazenarEAcionar(new BotaoLigar(), tv);
+			}
+		});
+
 	}
 }

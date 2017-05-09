@@ -1,3 +1,4 @@
+package br.fae.es.sem5.command;
 
 public class BotaoDesligar implements ICommand{
 

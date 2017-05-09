@@ -1,3 +1,4 @@
+package br.fae.es.sem5.command;
 
 public class Dispositivo {
 	private String nome;
