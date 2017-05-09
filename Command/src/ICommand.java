@@ -1,4 +1,4 @@
 
 public interface ICommand {
-	void acionar(Dispositivo d);
+	void precionar(Dispositivo d);
 }

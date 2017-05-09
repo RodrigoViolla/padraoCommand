@@ -5,7 +5,7 @@ public class Controle {
 
 	public void ArmazenarEAcionar(ICommand cmd, Dispositivo d) {
 		historico.add(cmd);
-		cmd.acionar(d);
+		cmd.precionar(d);
 	}
 
 	public String listarHistorico() {

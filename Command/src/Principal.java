@@ -5,9 +5,9 @@ public class Principal {
 		Dispositivo tv = new Dispositivo("TV da Sala");
 		Dispositivo radio = new Dispositivo("Rádio do Quarto");
 		
-		gerenciar.ArmazenarEAcionar(new Ligar(), tv);
-		gerenciar.ArmazenarEAcionar(new Desligar(), radio);
-		gerenciar.ArmazenarEAcionar(new Desligar(), tv);
+		gerenciar.ArmazenarEAcionar(new BotaoLigar(), tv);
+		gerenciar.ArmazenarEAcionar(new BotaoDesligar(), radio);
+		gerenciar.ArmazenarEAcionar(new BotaoDesligar(), tv);
 		
 		System.out.println(gerenciar.listarHistorico());
 	}
