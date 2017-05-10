@@ -11,14 +11,11 @@ import javax.swing.JLabel;
 import javax.swing.SwingConstants;
 
 public class JanelaPrincipal extends JFrame {
-	private Controle controle = new Controle();
 	private static final long serialVersionUID = 1L;
 
-	public static void main(String[] args) {
-		new JanelaPrincipal();
-	}
-
 	public JanelaPrincipal() {
+		super("Controle Remoto");
+		
 		setBackground(new Color(169, 169, 169));
 		setLayout(null);
 
@@ -79,13 +76,9 @@ public class JanelaPrincipal extends JFrame {
 		JButton btnDesligarArCondicionado = new JButton("Desligar");
 		btnDesligarArCondicionado.setBounds(251, 300, 89, 23);
 		add(btnDesligarArCondicionado);
-
-		btnLigarTV.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				Dispositivo tv = new Dispositivo("tv");
-				controle.ArmazenarEAcionar(new BotaoLigar(), tv);
-			}
-		});
-
+	}
+	
+	public static void main(String[] args) {
+		JanelaPrincipal janela new JanelaPrincipal();
 	}
 }
