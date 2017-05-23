@@ -6,4 +6,8 @@ public class BotaoDesligar implements ICommand{
 	public void precionar(Dispositivo d) {
 		System.out.println(d.getNome() + " Desligado");
 	}
+        
+         public String toString() {
+            return "Desligado";
+        }
 }

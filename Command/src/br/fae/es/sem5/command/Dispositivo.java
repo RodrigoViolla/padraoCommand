@@ -10,4 +10,8 @@ public class Dispositivo {
 	public String getNome() {
 		return nome;
 	}
+        
+        public String toString() {
+            return nome;
+        }
 }

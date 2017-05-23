@@ -31,7 +31,7 @@ public class JanelaPrincipal extends JFrame {
                 
                 JLabel lblTv = new JLabel("TV");
                 JLabel lblRadio = new JLabel("Radio");
-                JLabel lblPortaoEletronico = new JLabel("Port�o Eletronico");
+                JLabel lblPortaoEletronico = new JLabel("Portao Eletronico");
                 JLabel lblArCondicionado = new JLabel("Ar Condicionado");
                 
                 JButton btnLigarTV = new JButton("Ligar");

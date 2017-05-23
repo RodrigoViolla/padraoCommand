@@ -6,4 +6,8 @@ public class BotaoLigar implements ICommand {
 	public void precionar(Dispositivo d) {
 		System.out.println(d.getNome() + " Ligado");	
 	}
+        
+        public String toString() {
+            return "Ligado";
+        }
 }
