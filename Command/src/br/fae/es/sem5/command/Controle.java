@@ -3,18 +3,19 @@ package br.fae.es.sem5.command;
 import java.util.ArrayList;
 
 public class Controle {
-	private ArrayList<ICommand> historico = new ArrayList<ICommand>();
+    private ArrayList<String> historico = new ArrayList<String>();
 
 	public void ArmazenarEAcionar(ICommand cmd, Dispositivo d) {
-		historico.add(cmd);
+            String novoComando = d.getNome() + " - " + cmd.toString();
+            historico.add(novoComando);
 		cmd.precionar(d);
 	}
 
 	public String listarHistorico() {
-		StringBuilder builder = new StringBuilder();
+            StringBuilder builder = new StringBuilder();
 
-		for (ICommand h : historico)
-			builder.append("Comando: ").append(h.getClass().getName()).append("\n");
+            for (String h : historico)
+                builder.append(h).append("\n");
 
 		return builder.toString();
 	}
