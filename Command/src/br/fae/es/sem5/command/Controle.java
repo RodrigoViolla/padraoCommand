@@ -6,16 +6,16 @@ public class Controle {
     private ArrayList<String> historico = new ArrayList<String>();
 
 	public void ArmazenarEAcionar(ICommand cmd, Dispositivo d) {
-            String novoComando = d.getNome() + " - " + cmd.toString();
+            String novoComando = d.getNome() + " - " + cmd.toString() + "\n";
             historico.add(novoComando);
-		cmd.precionar(d);
+            cmd.precionar(d);
 	}
 
 	public String listarHistorico() {
             StringBuilder builder = new StringBuilder();
 
             for (String h : historico)
-                builder.append(h).append("\n");
+                builder.append(h);
 
 		return builder.toString();
 	}
