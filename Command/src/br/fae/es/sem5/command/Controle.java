@@ -7,7 +7,7 @@ public class Controle {
 
 	public void ArmazenarEAcionar(ICommand cmd, Dispositivo d) {
             String novoComando = d.getNome() + " - " + cmd.toString() + "\n";
-            historico.add(novoComando);
+            historico.add(0, novoComando);
             cmd.precionar(d);
 	}
 
