@@ -1,5 +1,5 @@
 package br.fae.es.sem5.command;
 
 public interface ICommand {
-    void precionar(Dispositivo d);
+    String precionar(Dispositivo d);
 }

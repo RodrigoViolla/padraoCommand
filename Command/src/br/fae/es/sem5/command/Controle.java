@@ -5,10 +5,10 @@ import java.util.ArrayList;
 public class Controle {
     private ArrayList<String> historico = new ArrayList<String>();
 
-    public void ArmazenarEAcionar(ICommand cmd, Dispositivo d) {
+    public String ArmazenarEAcionar(ICommand cmd, Dispositivo d) {
         String novoComando = d.getNome() + " - " + cmd.toString() + "\n";
         historico.add(0, novoComando);
-        cmd.precionar(d);
+        return cmd.precionar(d);
     }
 
     public String listarHistorico() {

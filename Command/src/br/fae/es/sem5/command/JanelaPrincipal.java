@@ -127,7 +127,7 @@ public class JanelaPrincipal extends JFrame {
 		btnLigarTV.setEnabled(false);
                 btnDesligarTV.setEnabled(true);
                               
-                gerenciar.ArmazenarEAcionar(new BotaoLigar(), tv);
+                System.out.println(gerenciar.ArmazenarEAcionar(new BotaoLigar(), tv));
                 lblResposta.setText("TV On");
                 txaHistorico.setText(gerenciar.listarHistorico());
             }
@@ -139,7 +139,7 @@ public class JanelaPrincipal extends JFrame {
 		btnLigarTV.setEnabled(true);
                 btnDesligarTV.setEnabled(false);
                                 
-                gerenciar.ArmazenarEAcionar(new BotaoDesligar(), tv);
+                System.out.println(gerenciar.ArmazenarEAcionar(new BotaoDesligar(), tv));
                 lblResposta.setText("TV Off");
                 txaHistorico.setText(gerenciar.listarHistorico());
             }
@@ -151,7 +151,7 @@ public class JanelaPrincipal extends JFrame {
 		btnLigarRadio.setEnabled(false);
                 btnDesligarRadio.setEnabled(true);
                                 
-                gerenciar.ArmazenarEAcionar(new BotaoLigar(), radio);
+                System.out.println(gerenciar.ArmazenarEAcionar(new BotaoLigar(), radio));
                 lblResposta.setText("Radio On");
                 txaHistorico.setText(gerenciar.listarHistorico());
             }
@@ -163,7 +163,7 @@ public class JanelaPrincipal extends JFrame {
                 btnLigarRadio.setEnabled(true);
                 btnDesligarRadio.setEnabled(false);
                                 
-                gerenciar.ArmazenarEAcionar(new BotaoDesligar(), radio);
+                System.out.println(gerenciar.ArmazenarEAcionar(new BotaoDesligar(), radio));
                 lblResposta.setText("Radio Off");
                 txaHistorico.setText(gerenciar.listarHistorico());
             }
@@ -175,7 +175,7 @@ public class JanelaPrincipal extends JFrame {
                 btnLigarPortaoEletronico.setEnabled(false);
                 btnDesligarPortaoEletronico.setEnabled(true);
                                 
-                gerenciar.ArmazenarEAcionar(new BotaoLigar(), portaoEletronico);
+                System.out.println(gerenciar.ArmazenarEAcionar(new BotaoLigar(), portaoEletronico));
                 lblResposta.setText("Portao Eletronico On");
                 txaHistorico.setText(gerenciar.listarHistorico());
             }
@@ -187,7 +187,7 @@ public class JanelaPrincipal extends JFrame {
 		btnLigarPortaoEletronico.setEnabled(true);
                 btnDesligarPortaoEletronico.setEnabled(false);
                                 
-                gerenciar.ArmazenarEAcionar(new BotaoDesligar(), portaoEletronico);
+                System.out.println(gerenciar.ArmazenarEAcionar(new BotaoDesligar(), portaoEletronico));
                 lblResposta.setText("Portao Eletronico Off");
                 txaHistorico.setText(gerenciar.listarHistorico());
             }
@@ -199,7 +199,7 @@ public class JanelaPrincipal extends JFrame {
 		btnLigarArCondicionado.setEnabled(false);
                 btnDesligarArCondicionado.setEnabled(true);
                                 
-                gerenciar.ArmazenarEAcionar(new BotaoLigar(),arCondicionado);
+                System.out.println(gerenciar.ArmazenarEAcionar(new BotaoLigar(),arCondicionado));
                 lblResposta.setText("Ar Condicionado On");
                 txaHistorico.setText(gerenciar.listarHistorico());
             }
@@ -211,7 +211,7 @@ public class JanelaPrincipal extends JFrame {
 		btnLigarArCondicionado.setEnabled(true);
                 btnDesligarArCondicionado.setEnabled(false);
                                 
-                gerenciar.ArmazenarEAcionar(new BotaoDesligar(), arCondicionado);
+                System.out.println(gerenciar.ArmazenarEAcionar(new BotaoDesligar(), arCondicionado));
                 lblResposta.setText("Ar Condicionado Off");
                 txaHistorico.setText(gerenciar.listarHistorico());
             }
